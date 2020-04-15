@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0px;
+    font-family: "Roboto", monospace;
+}
+
+header {
+    background: #F5F5F6;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div {
+    height: 23px;
+    width: 89px;
+    background-image: url("logo-of-the-bank.png");
+    margin: 0 5%;
+}
+
+header button {
+    border: none;
+    background: transparent;
+
+    color: #959BA4;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+header button:nth-child(2) {
+    color: black;
+}
+
+header button:last-child {
+    width: 58px;
+    height: 33px;
+    margin: 0 5%;
+
+    background: #FFFFFF;
+    color: black;
+    border-radius: 4px;
+}
+
+article {
+    margin: auto;
+    width: 640px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+#change-button {
+    border: none;
+    background: transparent;
+    margin: 90px 30px 0px 30px;
+
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.input-currency {
+    height: 180px;
+    margin: 20px 0px;
+}
+
+.input-currency p {
+    color: #9F9F9F;
+    font-size: 12px;
+}
+
+.button-container {
+    display: flex;
+}
+
+.btn-select-currency {
+    border: 1px solid #E5E5E5;
+    border-width: 1px 0.5px;
+    background: transparent;
+    width: 52px;
+    height: 28px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #E5E5E5;
+}
+
+.btn-select-currency:last-child {
+    border-width: 1px 1px 1px 0.5px;
+    border-radius: 0px 4px 4px 0px ;
+}
+
+.btn-select-currency:first-child {
+    border-width: 1px 0.5px 1px 1px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.active {
+    background: #833AE0;
+    color: #FFF;
+    border-color: #833AE0;
+}
+
+.show-currency {
+    margin-top: 20px;
+    width: 259px;
+    height: 102px;
+
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.show-currency input {
+    width: 230px;
+    height: 38px;
+    margin: 13px 10px;
+    border: none;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.show-currency p {
+    margin: 10px;
+    font-size: 12px;
+    color: #C6C6C6;
+}
+
+.loading {
+    background: rgba(0, 0, 0, 0.44);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading p {
+    margin: auto;
+    width: 129px;
+    height: 54px;   
+    font-size: 24px;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}

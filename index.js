@@ -113,23 +113,40 @@ changeButton.addEventListener('click', () => {
     usedCurrency.base = usedCurrency.symbols;
     usedCurrency.symbols = buffer;
     currency = 1 / currency;
-    // меняем отображение выбранной валюты
+    // меняем отображение выбранной валюты слева
     const allSelectButtons = document.querySelectorAll('.btn-select-currency');
     allSelectButtons.forEach((item) => item.classList.remove('active'));
 
     const allSymbolButtons = document.querySelectorAll('.select-symbols .btn-select-currency');
+    let flag = 0;
     allSymbolButtons.forEach((item) => {
         if (item.value === usedCurrency.symbols) {
-            item.classList.add('active')
+            item.classList.add('active');
+            flag = 1;
         }
     });
+    // отдельно проверяем последнюю кнопку выбора
+    const selectSymbolButton = document.querySelector('.select-symbols .btn-select-currency:last-child');
+    if (flag === 0) {
+        selectSymbolButton.classList.add('active');
+        selectSymbolButton.value = usedCurrency.symbols;
+    }
 
+    // меняем отображение выбранной валюты справа
     const allBaseButtons = document.querySelectorAll('.select-base .btn-select-currency');
+    flag = 0;
     allBaseButtons.forEach((item) => {
         if (item.value === usedCurrency.base) {
-            item.classList.add('active')
+            item.classList.add('active');
+            flag = 1;
         }
     });
+    // отдельно проверяем последнюю кнопку выбора
+    const selectBaseButton = document.querySelector('.select-base .btn-select-currency:last-child');
+    if (flag === 0) {
+        selectBaseButton.classList.add('active');
+        selectBaseButton.value = usedCurrency.base;
+    }
 
     // меняем местами количество денег
     buffer = inputBaseElement.value;
